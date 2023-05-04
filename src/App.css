@@ -1,42 +1,325 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.abtMe-info {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../src/assets/Aches.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff6dcd;
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.aboutMe {
+  padding: 1em 3em;
+}
+
+.aboutMe > p {
+  line-height: 1.5;
+  padding: 1em 0;
+}
+
+.aboutMe > h1 {
+  font-size: 3em;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials a {
+  margin-right: 1em;
+  font-size: 1.2em;
+  color: grey;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: #fff;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-links {
+  color: #333;
+  margin: 0 0.5em;
+}
+
+.nav-title {
+  color: #ff6dcd;
+}
+.nav-ul[data-visible="false"] {
+  display: none;
+}
+.nav-ul[data-visible="true"] {
+  display: flex;
+  transform: translateX(0);
+  z-index: 100000;
+}
+.mobile-nav {
+  border: none;
+  background-color: #fff;
+  width: 16px;
+  height: 16px;
+  background-image: url(../src/assets/mobile-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.mobile-nav[aria-expanded="true"] {
+  background-image: url(../src/assets/mobile-close.svg);
+  z-index: 100000;
+}
+.btn-wrapper {
+  background: #5a60ae;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 1em;
+}
+
+/* PROJECTS STYLING */
+.project {
+  width: 80%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 1em;
+  overflow: scroll;
+  padding: 1em;
+  margin: 0.5em auto;
+  background: #fff;
+}
+
+.project img {
+  width: 350px;
+  max-width: 50%;
+  border-radius: 0.5em;
+  height: 100%;
+}
+
+.project-details {
+  padding: 0 1.5em;
+}
+.project-details > p {
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.project-btn {
+  background: #ff6dcd;
+  margin: 0.5em;
+  color: #fff;
+  border-radius: 1em;
+  padding: 0.2em 1em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.project-btn:hover,
+.project-btn2:hover {
+  background: #5a60ae;
+  color: #fff;
+}
+
+.project-btn2 {
+  border: 2px solid #5a60ae;
+  color: #5a60ae;
+  border-radius: 1em;
+  padding: 0.1em 1em;
+  margin: 0.5em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.project-icons {
+  color: #5a60ae;
+  padding: 0.5em 0;
+  margin-left: 0.5em;
+}
+.project-main {
+  background-color: rgba(110, 151, 255, 0.1);
+}
+.project-main > h1 {
+  text-transform: uppercase;
+  font-family: "Leckerli One", cursive;
+  font-size: 2em;
+  padding: 0.5em 0 0.5em 0;
+  color: #333;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.work {
+  padding: 1em 3em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.work1 h3 {
+  font-size: 1.4em;
+  font-weight: bolder;
+  padding: 0.5em 0;
+}
+.work1 {
+  text-align: center;
+  margin-bottom: 0.8em;
+  padding: 1em;
+}
+
+.work1:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 253, 253);
+}
+
+.work-title {
+  padding: 0 3em;
+  font-weight: bold;
+  color: #31326f;
+  font-family: "Poppins", sans-serif;
+}
+
+/* FOOTER STYLING */
+footer {
+  background: #5a60ae;
+  color: white;
+  padding: 1.5em 1em;
+}
+
+.footer-links {
+  color: white;
+  margin: 0 0.5em;
+}
+
+@media (min-width: 40rem) {
+  .nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+  }
+  .project-btn {
+    background: #ff6dcd;
+    margin: 0.5em;
+    color: #fff;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    font-size: 0.9em;
+  }
+
+  .project-btn2 {
+    border: 1px solid #5a60ae;
+    color: #5a60ae;
+    border-radius: 1em;
+    padding: 0.1em 1em;
+    margin: 0.5em;
+    font-size: 0.9em;
+  }
+  .project-main > h1 {
+    text-transform: uppercase;
+    font-family: "Leckerli One", cursive;
+    font-size: 2em;
+    margin: 0 4em;
+    padding: 0.5em 0 0em 0;
+    color: #333;
+  }
+  .mobile-nav,
+  .btn-wrapper {
+    display: none;
+  }
+  .nav-ul[data-visible="false"] {
+    display: flex;
+  }
+
+  .work {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (min-width: 60rem) {
+  .nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
-}
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 1em;
+  }
 
-.card {
-  padding: 2em;
-}
+  .project-btn {
+    background: #ff6dcd;
+    margin: 0.5em;
+    color: #fff;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    font-size: 1em;
+  }
 
-.read-the-docs {
-  color: #888;
+  .project-btn2 {
+    border: 1px solid #5a60ae;
+    color: #5a60ae;
+    border-radius: 1em;
+    padding: 0.1em 1em;
+    margin: 0.5em;
+    font-size: 1em;
+  }
+  .project {
+    display: flex;
+    width: 50%;
+    margin-bottom: 1.5em;
+  }
+  .project-main > h1 {
+    text-transform: uppercase;
+    font-family: "Leckerli One", cursive;
+    font-size: 2em;
+    margin: 0 4em;
+    padding: 0.5em 0 0.5em 0;
+    color: #333;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .nav-ul[data-visible="false"] {
+    display: flex;
+  }
 }
