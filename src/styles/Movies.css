@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;900&display=swap");
+
+.loading {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  width: 80%;
+  color: rgb(255, 255, 255);
+  /* max-width: 100%; */
+  margin: 1em;
+}
+
+.card-info {
+  /* text-align: start; */
+  padding: 1.5em;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+
+.card:nth-child(1) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-1.0c96fd00.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card:nth-child(2) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-2.b0a7b209.png");
+}
+.card:nth-child(3) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-3.1914d853.png");
+}
+.card:nth-child(4) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-4.c21c4d4b.png");
+}
+.card:nth-child(5) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-5.67d061d6.png");
+}
+.card:nth-child(6) > * {
+  background-image: url("https://finmavis.github.io/swapi-task/static/media/bg-card-6.b4fea25d.png");
+}
+
+.card:hover {
+  box-shadow: #ff6dcd 0px 0px 10px 3px, rgb(0, 0, 0) 0px 0px 10px;
+}
+
+.movie-container {
+  padding: 1em 3em;
+}
+.movie-container > h3 {
+  font-size: 1.3em;
+  padding-bottom: 0.5em;
+}
+
+.movie-container > p {
+  /* font-size: 1.1em; */
+  width: 70%;
+  /* padding: 0 2em; */
+}
+
+.movie-link {
+  padding: 0.5em 1em;
+  background: #ff6dcd;
+  color: aliceblue;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.movie-link:hover {
+  background: #5a60ea;
+}
+
+.summary {
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+  white-space: normal;
+  border-bottom: 2px solid #5a60ea;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+.release-date {
+  color: rgb(157, 157, 157);
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+.movie-list {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+main {
+  padding: 1em 2em;
+  background-color: rgb(254, 254, 254);
+  font-family: "Poppins", sans-serif;
+}
+.details-card {
+  padding: 1em 2em;
+  background: #f8f9fa;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.details {
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
+}
+
+.details > p:nth-of-type(1) {
+  color: #31326f;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+
+.details > h1 {
+  font-weight: bolder;
+  color: crimson;
+}
+
+.description {
+  padding: 1em 0;
+  border-bottom: 2px;
+}
+.description p:nth-child(1) {
+  color: #31326f;
+  font-size: 1.2em;
+  font-weight: bolder;
+  padding-bottom: 0.6em;
+}
+.characters {
+  padding: 1em 0;
+}
+.characters > h3 {
+  color: #31326f;
+  padding-bottom: 0.5em;
+}
+.character-list {
+  list-style-type: circle;
+}
+/* @media (min-width: 40rem) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+} */
+
+@media (min-width: 60rem) {
+  .movie-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 1em;
+  }
+  .card {
+    /* height: 200px; */
+  }
+}
